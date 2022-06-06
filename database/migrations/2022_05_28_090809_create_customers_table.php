@@ -15,11 +15,17 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('patronymic')->nullable();
+            $table->string('email')->nullable();
+            $table->boolean('sex')->default(0);
+            $table->boolean('is_send_notify')->default(0);
             $table->timestamps();
         });
     }
 
-    /**
+    /** 
      * Reverse the migrations.
      *
      * @return void
