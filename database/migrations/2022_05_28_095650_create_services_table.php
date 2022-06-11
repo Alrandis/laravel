@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->int('id_services_category');
+            $table->string('name');
+            $table->int('duration');
+            $table->int('price');
             $table->timestamps();
         });
     }

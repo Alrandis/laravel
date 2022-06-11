@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->int('services_id');
+            $table->int('castomer_car_id');
+            $table->int('employee_id');
+            $table->int('status');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->timestamps();
         });
     }
